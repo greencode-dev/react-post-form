@@ -13,8 +13,8 @@ export default function FormWithObject() {
     // handler generico per gli input testuali
     const handleChange = (e) => {
         const { name, value, type, checked } = e.target;
-        setPost((prev) => ({
-            ...prev,
+        setPost((newPost) => ({
+            ...newPost,
             // se è checkbox usiamo checked, altrimenti value
             [name]: type === 'checkbox' ? checked : value,
         }));
